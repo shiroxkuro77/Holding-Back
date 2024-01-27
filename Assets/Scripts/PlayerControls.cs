@@ -14,6 +14,7 @@ public class PlayerControls : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    bool isMoveable = true; 
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,9 @@ public class PlayerControls : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        if (!isMoveable) {
+            return;
+        }
         
         if (movementInput != Vector2.zero) {
            bool success = TryMove(movementInput);
@@ -71,5 +75,13 @@ public class PlayerControls : MonoBehaviour
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
+    }
+    
+    public void disableMovement() {
+        isMoveable = false;
+    }
+
+    public void enableMovement() {
+        isMoveable = true;
     }
 }

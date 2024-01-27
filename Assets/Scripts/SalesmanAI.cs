@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class SalesmanAI : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float collisionOffset = 0.05f;
+    public float collisionOffset = 0.01f;
     public Vector2 targetDirection;
     private Rigidbody2D rb; 
     SpriteRenderer spriteRenderer;
@@ -17,6 +17,8 @@ public class SalesmanAI : MonoBehaviour
     public int visionRange = 10;
     public LayerMask playerLayer;
     public bool isFollowing = false;
+    public bool isSelling = false;
+    public bool canFollow = true;
     GameObject playerObject;
 
     private void Awake() {
@@ -26,12 +28,18 @@ public class SalesmanAI : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        if (isSelling) {
+            return;
+        }
+
         if (isFollowing) {
             FollowPlayer();
             return;
         }
 
-        DetectPlayer(targetDirection);
+        if (canFollow) {
+            DetectPlayer(targetDirection);
+        }
 
         if (!isFollowing) {
             bool success = TryMove(targetDirection);
@@ -43,17 +51,7 @@ public class SalesmanAI : MonoBehaviour
         }*/
         
 
-        if (targetDirection.x < 0) {
-            spriteRenderer.flipX = true;
-            animator.SetInteger("MovingDirection", 1);
-        } else if (targetDirection.x > 0) {
-            spriteRenderer.flipX = false;
-            animator.SetInteger("MovingDirection", 1);
-        } else if (targetDirection.y > 0) { 
-            animator.SetInteger("MovingDirection", 2);
-        } else if (targetDirection.y < 0) { 
-            animator.SetInteger("MovingDirection", 3);
-        } 
+        
     }
 
     private bool TryMove(Vector2 targetDirection) {
@@ -62,10 +60,34 @@ public class SalesmanAI : MonoBehaviour
                     movementFilter,
                     castCollisions,
                     moveSpeed * Time.fixedDeltaTime + collisionOffset);
+
+            //Player Doesn't count
+            for (int i = 0; i < castCollisions.Count; i++)
+            {
+                RaycastHit2D hit = castCollisions[i];
+                if (hit.collider != null && hit.collider.CompareTag("Player")) {
+                    count--;
+                }
+            }
             
             if (count <= 1) {
                 rb.MovePosition(rb.position + targetDirection * moveSpeed * Time.fixedDeltaTime);
+
+                if (targetDirection.x < 0) {
+                    spriteRenderer.flipX = true;
+                    animator.SetInteger("MovingDirection", 1);
+                } else if (targetDirection.x > 0) {
+                    spriteRenderer.flipX = false;
+                    animator.SetInteger("MovingDirection", 1);
+                } else if (targetDirection.y > 0) { 
+                    animator.SetInteger("MovingDirection", 2);
+                } else if (targetDirection.y < 0) { 
+                    animator.SetInteger("MovingDirection", 3);
+                }     
+
                 return true;
+
+
             } else {
                 return false;
             }
@@ -87,19 +109,41 @@ public class SalesmanAI : MonoBehaviour
         Vector2 newDirection = (playerObject.transform.position - transform.position).normalized;
         moveSpeed = 5f;
         TryMove(newDirection);
+        if (TryMove(new Vector2(0, newDirection.y))) return;
+        TryMove(new Vector2(newDirection.x, 0));
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            isSelling = true;
             // Enemy is touching player
             Debug.Log("Player Touched! Selling him things!");
             
-            GameObject player = collision.gameObject;
-            // Deactivate the GameObject
-            player.SetActive(false);
+            playerObject = collision.gameObject;
+
+            PlayerControls playercontrols = playerObject.GetComponent<PlayerControls>();
+            playercontrols.disableMovement();
+
+            animator.SetBool("isSelling", true);
+            StartCoroutine(WaitAndTriggerAction());
         }
+    }
+
+    IEnumerator WaitAndTriggerAction()
+    {
+        // Wait for 3 seconds
+        yield return new WaitForSeconds(2f);
+
+        isSelling = false;
+        Debug.Log("Finished sale pitch!");
+
+        animator.SetBool("isSelling", false);
+
+        PlayerControls playercontrols = playerObject.GetComponent<PlayerControls>();
+        playercontrols.enableMovement();
+        gameObject.SetActive(false);
     }
 
 }
