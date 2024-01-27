@@ -26,6 +26,10 @@ public class Timer : MonoBehaviour
             }
             timeText.text = timeToDisplay.ToString();
         }
+
+        if (timeLeft <= 0){
+            TimeUp();
+        }
     }
 
     public void SetTimer(float time){
@@ -39,5 +43,6 @@ public class Timer : MonoBehaviour
     //TODO notify gamemaster when time is up
     public void TimeUp(){
         // call gamemaster component and end game
+        Debug.Log("Time is up");
     }
 }
