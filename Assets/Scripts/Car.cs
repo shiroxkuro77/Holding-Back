@@ -9,30 +9,6 @@ public class Car : MonoBehaviour
     Vector3 velocityVector;
     Quaternion rotationAngle;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-        switch(direction){
-            case 0.0f:
-                velocityVector = new Vector2(speed * -1,0);
-                break;
-
-            case 90.0f:
-                velocityVector = new Vector2(0,speed);
-                break;
-            case -90.0f:
-                velocityVector = new Vector2(0,speed * -1);
-                break;
-
-            case 180.0f:
-                velocityVector = new Vector2(speed,0);
-                break;
-            
-        }
-        GetComponent<Rigidbody2D>().velocity = velocityVector;
-    }
-
     private void OnCollisionEnter2D(Collision2D other) {
         Debug.Log("Collision");
         PlayerControls playerScript = other.transform.GetComponent<PlayerControls>();
@@ -56,5 +32,27 @@ public class Car : MonoBehaviour
 
         // TODO call gamemaster to enable lost game process
 
+    }
+
+    public void SetCarMovement(float _direction, float _speed){
+        speed = _speed;    
+        switch(_direction){
+            case 0.0f:
+                velocityVector = new Vector2(speed * -1,0);
+                break;
+
+            case 90.0f:
+                velocityVector = new Vector2(0,speed);
+                break;
+            case -90.0f:
+                velocityVector = new Vector2(0,speed * -1);
+                break;
+
+            case 180.0f:
+                velocityVector = new Vector2(speed,0);
+                break;
+            
+        }
+        GetComponent<Rigidbody2D>().velocity = velocityVector;
     }
 }
