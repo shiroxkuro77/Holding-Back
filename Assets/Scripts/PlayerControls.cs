@@ -25,6 +25,10 @@ public class PlayerControls : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        if (DialogueManager.GetInstance().dialogueIsPlaying) {
+            return;
+        }
+
         if (!isMoveable) {
             return;
         }
