@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Goal : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class Goal : MonoBehaviour
 	{
 		uiLevelCleared.enabled = false;
 	}
+
+    void Update() {
+        if (uiLevelCleared.enabled && Keyboard.current.enterKey.wasPressedThisFrame) {
+            LoadNextScene();
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,8 +30,6 @@ public class Goal : MonoBehaviour
                 playercontrols.disableMovement();
 
                 uiLevelCleared.enabled = true;
-                // Load the next scene in the build order
-                //LoadNextScene();
             }
     }
 

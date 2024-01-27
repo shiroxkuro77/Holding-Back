@@ -196,6 +196,8 @@ MonoBehaviour:
     m_Bits: 8
   isFollowing: 0
   isSelling: 0
+  canFollow: 1
+  inkJSON: {fileID: 4900000, guid: fdf183300109c4a42a197e38d615712d, type: 3}
 --- !u!95 &4211151448319364273
 Animator:
   serializedVersion: 5
