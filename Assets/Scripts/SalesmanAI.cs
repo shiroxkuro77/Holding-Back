@@ -19,6 +19,7 @@ public class SalesmanAI : MonoBehaviour
     public bool isFollowing = false;
     public bool isSelling = false;
     public bool canFollow = true;
+    public TextAsset inkJSON;
     GameObject playerObject;
 
     private void Awake() {
@@ -29,6 +30,9 @@ public class SalesmanAI : MonoBehaviour
 
     private void FixedUpdate() {
         if (isSelling) {
+            if (!DialogueManager.GetInstance().dialogueIsPlaying) {
+                sellFinish();
+            }
             return;
         }
 
@@ -121,14 +125,14 @@ public class SalesmanAI : MonoBehaviour
             // Enemy is touching player
             Debug.Log("Player Touched! Selling him things!");
             
-            playerObject = collision.gameObject;
-
-            PlayerControls playercontrols = playerObject.GetComponent<PlayerControls>();
-            playercontrols.disableMovement();
-
             animator.SetBool("isSelling", true);
-            StartCoroutine(WaitAndTriggerAction());
+            
+            DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+            
         }
+    }
+    void sellFinish() {
+        gameObject.SetActive(false);
     }
 
     IEnumerator WaitAndTriggerAction()
