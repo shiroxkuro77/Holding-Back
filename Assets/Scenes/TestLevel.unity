@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec238832643c1d74abc51c3b5f2d92e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 12
+  timeLeft: 3
   timeText: {fileID: 1302202674}
   timeToTurnRed: 10
   gameStarted: 1
