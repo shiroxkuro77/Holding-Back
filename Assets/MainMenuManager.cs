@@ -12,15 +12,6 @@ public class MainMenuManager : MonoBehaviour
         confirmQuitPopup.SetActive(true);
     }
 
-    public void CancelQuitGame(){
-        confirmQuitPopup.SetActive(false);
-    }
-    
-    public void QuitGame(){
-        Debug.Log("Quitting the game");
-        Application.Quit();
-    }
-
     public void StartGame(){
         SceneManager.LoadScene(firstLevelName);
     }
