@@ -10,6 +10,7 @@ public class Civilian : MonoBehaviour
 
     [SerializeField] private int movingDistance = 4;
     [SerializeField] private float timeOutTime = 3f;
+    [SerializeField] private bool isStatic = false;
 
     public float timeToShuffle;
     public float timeSinceShuffle;
@@ -39,22 +40,28 @@ public class Civilian : MonoBehaviour
                 timeToShuffle = Random.Range(minTimeToShuffle, maxTimeToShuffle);
                 facingDirection = Random.Range(0,4);
                     
-                //move towards facing direction.
-                switch(facingDirection){
-                    case (0):
-                        dir = Vector3.down * Random.Range(-movingDistance, movingDistance);
-                        break;
-                    case (1):
-                        dir = Vector3.left * Random.Range(-movingDistance, movingDistance);
-                        break;
-                    case (2):
-                        dir = Vector3.up * Random.Range(-movingDistance, movingDistance);
-                        break;
-                    case (3):
-                        dir = Vector3.right * Random.Range(-movingDistance, movingDistance);
-                        break;
+                if (!isStatic){
+                    //move towards facing direction.
+                    switch(facingDirection){
+                        case (0):
+                            dir = Vector3.down * Random.Range(-movingDistance, movingDistance);
+                            break;
+                        case (1):
+                            dir = Vector3.left * Random.Range(-movingDistance, movingDistance);
+                            break;
+                        case (2):
+                            dir = Vector3.up * Random.Range(-movingDistance, movingDistance);
+                            break;
+                        case (3):
+                            dir = Vector3.right * Random.Range(-movingDistance, movingDistance);
+                            break;
+                    }
+                    newPos = transform.position + dir;
                 }
-                newPos = transform.position + dir;
+                else{
+                    isShuffling = false;
+                }
+                
             }
         }
         else{
