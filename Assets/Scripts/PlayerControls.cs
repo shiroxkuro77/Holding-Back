@@ -84,4 +84,11 @@ public class PlayerControls : MonoBehaviour
     public void enableMovement() {
         isMoveable = true;
     }
+
+    public void HitByCar(){
+        Transform cam = transform.Find("MainCamera");
+        if (cam != null){
+            cam.SetParent(null);
+        }
+    }
 }
