@@ -19467,7 +19467,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestNPC
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4326902752174606150, guid: 7a2f55e21557b1e47a35060fa5acdd59, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
