@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using Ink.Runtime;
 
 public class OldLadyAI : MonoBehaviour
 {
@@ -18,10 +20,19 @@ public class OldLadyAI : MonoBehaviour
     // public bool isFollowing = false;
     // public bool isSelling = false;
     // public bool canFollow = true;
-    // GameObject playerObject;
+    GameObject playerObject;
 
     // private bool hasCrossedJunction = false;
     // private bool hasReachedJunction = false;
+
+    [SerializeField] private GameObject visualCue;
+
+    [Header("Ink JSON")]
+    [SerializeField] private TextAsset inkJSON;
+    private bool playerInRange;
+
+    private Story currentStory;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +40,8 @@ public class OldLadyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); 
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        playerInRange = false;
+        visualCue.SetActive(false);
     }
 
     // // In the beginning, old lady walks towards the junctions and wait
@@ -126,5 +139,49 @@ public class OldLadyAI : MonoBehaviour
         // if (hasReachedJunction && hasCrossedJunction) {
         //     UnfollowPlayer();
         // }
+
+        if (DialogueManager.GetInstance().dialogueIsPlaying) {
+            return;
+        }
+
+        if (playerInRange) {
+            visualCue.SetActive(true);
+            if (Keyboard.current.FindKeyOnCurrentKeyboardLayout("f").wasPressedThisFrame) {
+                currentStory = new Story(inkJSON.text);
+                DialogueManager.GetInstance().EnterDialogueMode(currentStory);
+                transform.position = new Vector2(playerObject.transform.position.x, playerObject.transform.position.y + 1); 
+                gameObject.transform.SetParent(playerObject.transform);
+                PlayerControls playercontrols = playerObject.GetComponent<PlayerControls>();
+                playercontrols.moveSpeed = 3f;
+            }
+        } else {
+            visualCue.SetActive(false);
+        }
+
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerObject = collision.gameObject;
+            playerInRange = true;            
+        }
+    }
+
+     void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerInRange = false;            
+        }
+    }
+
+    private void OnDisable()
+    {
+       if (playerObject != null) {
+            PlayerControls playercontrols = playerObject.GetComponent<PlayerControls>();
+            playercontrols.moveSpeed = 7f;
+        }
     }
 }
