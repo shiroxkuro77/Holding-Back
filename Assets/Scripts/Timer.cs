@@ -46,4 +46,8 @@ public class Timer : MonoBehaviour
         Debug.Log("Time is up");
         GameMaster.instance.PlayerLose();
     }
+
+    public void IncreaseTime(float time){
+        timeLeft += time;
+    }
 }

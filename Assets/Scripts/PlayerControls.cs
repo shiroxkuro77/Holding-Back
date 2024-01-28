@@ -8,13 +8,16 @@ public class PlayerControls : MonoBehaviour
     //Moving Direction: 0 None, 1 Right, 2 Up, 3 Down, 4 Left
     public float moveSpeed = 1f;
     public float collisionOffset = 0f;
+    public float notifTime = 2f;
     public ContactFilter2D movementFilter;
     Vector2 movementInput;
     Animator animator;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    bool isMoveable = true; 
+    bool isMoveable = true;
+
+    [SerializeField] private GameObject notifObject; 
 
     // Start is called before the first frame update
     void Start()
@@ -95,5 +98,17 @@ public class PlayerControls : MonoBehaviour
         if (cam != null){
             cam.SetParent(null);
         }
+    }
+
+    public void IncreaseTimeNotif(float seconds){
+        StartCoroutine(IncreaseTimeNotifIE(seconds));
+    }
+
+    IEnumerator IncreaseTimeNotifIE(float seconds){
+        notifObject.SetActive(true);
+        notifObject.GetComponent<TextMesh>().text = "+ " + seconds.ToString() + " seconds";
+
+        yield return new WaitForSeconds(notifTime);
+        notifObject.SetActive(false);
     }
 }
