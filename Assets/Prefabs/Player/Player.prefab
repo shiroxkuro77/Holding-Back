@@ -105,14 +105,14 @@ MonoBehaviour:
   collisionOffset: 0.05
   movementFilter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 255
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
@@ -127,7 +127,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 5658422274399232508}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0

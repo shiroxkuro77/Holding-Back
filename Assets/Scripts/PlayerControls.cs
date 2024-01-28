@@ -65,11 +65,12 @@ public class PlayerControls : MonoBehaviour
                         movementFilter,
                         castCollisions,
                         moveSpeed * Time.fixedDeltaTime + collisionOffset);
-
+        Debug.Log(count);
         if (count == 0) {
             rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
             return true;
         } else {
+            Debug.Log("Cant go there");
             return false;
         }
 

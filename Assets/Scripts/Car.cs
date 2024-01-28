@@ -6,8 +6,35 @@ public class Car : MonoBehaviour
 {   
     public float speed = 1f;
     [SerializeField] private float direction = 90.0f;
+    [SerializeField] private float slowDownTime = 2f;
+
+    public ContactFilter2D contactFilter;
     Vector3 velocityVector;
     Quaternion rotationAngle;
+
+    public bool autoStart = false;
+    public bool questStarted = false;
+    bool isDecelerating = false;
+    List<RaycastHit2D> results = new List<RaycastHit2D>();
+
+    private void Start() {
+        if (autoStart){
+            SetCarMovement(direction, speed);
+        }
+    }
+
+    private void Update() {
+        
+        if (questStarted){
+            int hit = Physics2D.Raycast(this.transform.position + velocityVector * 1.2f, velocityVector, contactFilter, results, 0.1f);
+            if (hit > 0){
+                Debug.Log("Stopping");
+                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            }    
+        }
+
+        
+    }
 
     private void OnCollisionEnter2D(Collision2D other) {
         Debug.Log("Collision");
@@ -38,21 +65,21 @@ public class Car : MonoBehaviour
         speed = _speed;    
         switch(_direction){
             case 0.0f:
-                velocityVector = new Vector2(speed * -1,0);
+                velocityVector = new Vector2(-1,0);
                 break;
 
             case 90.0f:
-                velocityVector = new Vector2(0,speed);
+                velocityVector = new Vector2(0,1);
                 break;
             case -90.0f:
-                velocityVector = new Vector2(0,speed * -1);
+                velocityVector = new Vector2(0,-1);
                 break;
 
             case 180.0f:
-                velocityVector = new Vector2(speed,0);
+                velocityVector = new Vector2(1,0);
                 break;
             
         }
-        GetComponent<Rigidbody2D>().velocity = velocityVector;
+        GetComponent<Rigidbody2D>().velocity = velocityVector * speed;
     }
 }
