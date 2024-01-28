@@ -55,6 +55,7 @@ public class Car : MonoBehaviour
                 playersRB.velocity = pushVector;
             }
             Debug.Log("Player Hit. Lost game");
+            GameMaster.instance.PlayerLose();
         }
 
         // TODO call gamemaster to enable lost game process

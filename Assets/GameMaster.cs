@@ -18,7 +18,6 @@ public class GameMaster : MonoBehaviour
         Time.timeScale = 1;
     }
     public void PlayerLose(){
-        Time.timeScale = 0;
         loseUI.SetActive(true);
 
     }
