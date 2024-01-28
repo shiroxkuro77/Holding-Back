@@ -82,4 +82,9 @@ public class Car : MonoBehaviour
         }
         GetComponent<Rigidbody2D>().velocity = velocityVector * speed;
     }
+
+    public void QuestEnded(){
+        questStarted = false;
+        GetComponent<Rigidbody2D>().velocity = velocityVector * speed;
+    }
 }
