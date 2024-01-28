@@ -8,6 +8,10 @@ public class Goal : MonoBehaviour
 {
     public Canvas uiLevelCleared;
 
+    [SerializeField] private bool isOccupied = false;
+
+    public TextAsset inkJSON;
+
     void Start()
 	{
 		uiLevelCleared.enabled = false;
@@ -23,13 +27,19 @@ public class Goal : MonoBehaviour
     {
             if (collision.gameObject.CompareTag("Player"))
             {
-                // Assuming the goal is tagged as "Goal" and the player entered the trigger
-                Debug.Log("Player reached the goal!");
+                if (!isOccupied){
+                    // Assuming the goal is tagged as "Goal" and the player entered the trigger
+                    Debug.Log("Player reached the goal!");
 
-                PlayerControls playercontrols = collision.gameObject.GetComponent<PlayerControls>();
-                playercontrols.disableMovement();
+                    PlayerControls playercontrols = collision.gameObject.GetComponent<PlayerControls>();
+                    playercontrols.disableMovement();
 
-                uiLevelCleared.enabled = true;
+                    uiLevelCleared.enabled = true;
+                }
+                else{
+                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                }
+                
             }
     }
 
