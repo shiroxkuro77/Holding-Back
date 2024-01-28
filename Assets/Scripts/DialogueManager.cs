@@ -65,6 +65,13 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();
     }
 
+    public void EnterDialogueMode(Story story) {
+        currentStory = story;
+        dialogueIsPlaying = true;
+        dialoguePanel.SetActive(true);
+        ContinueStory();
+    }
+
     private void ExitDialogueMode() {
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
