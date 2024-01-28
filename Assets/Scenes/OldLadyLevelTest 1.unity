@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4725796936564939136, guid: 2278cff795002744ea6b3df7439be148, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 605acfbddc3080a4782282847ba11452, type: 3}
     - target: {fileID: 5722874322087943993, guid: 2278cff795002744ea6b3df7439be148, type: 3}
       propertyPath: m_Name
       value: OldLady Finish Area
