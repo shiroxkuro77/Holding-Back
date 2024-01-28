@@ -1205,6 +1205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConfirmQuitPopup
       objectReference: {fileID: 0}
+    - target: {fileID: 5628166068770501792, guid: 0c0b0f32d0dede34899bcf5d9c4d680e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7703977110332635410, guid: 0c0b0f32d0dede34899bcf5d9c4d680e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
