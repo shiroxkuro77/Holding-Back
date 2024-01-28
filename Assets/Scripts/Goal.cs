@@ -34,7 +34,8 @@ public class Goal : MonoBehaviour
                     PlayerControls playercontrols = collision.gameObject.GetComponent<PlayerControls>();
                     playercontrols.disableMovement();
 
-                    uiLevelCleared.enabled = true;
+                    GameMaster.instance.PlayerWin();
+                    // uiLevelCleared.enabled = true;
                 }
                 else{
                     DialogueManager.GetInstance().EnterDialogueMode(inkJSON);

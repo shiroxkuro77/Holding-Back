@@ -44,5 +44,6 @@ public class Timer : MonoBehaviour
     public void TimeUp(){
         // call gamemaster component and end game
         Debug.Log("Time is up");
+        GameMaster.instance.PlayerLose();
     }
 }
