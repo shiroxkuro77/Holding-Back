@@ -838,7 +838,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1538235004269914888, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: timeLeft
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1733853630921755712, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -848,6 +848,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReturnToMainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1768664953317243542, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 'With seconds to spare
+
+        I dodged a scare
+
+        I made it
+        to the throne
+
+        My timing rare'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768664953317243542, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768664953317243542, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940496625727405505, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 'With seconds to spare
+
+        I dodged a scare
+
+        I made it
+        to the throne
+
+        My timing rare
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940496625727405505, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940496625727405505, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 2243140046584851120, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -856,6 +896,43 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartGame
       objectReference: {fileID: 0}
+    - target: {fileID: 2933431280519016298, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933431280519016298, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289810883285605007, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302799534650576620, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3382538068825258348, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 'With urgency pressing
+
+        I faced the distressing
+
+        but
+        in the end
+
+        I failed the test
+
+        unable to ''go'' at my best'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3382538068825258348, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3382538068825258348, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 3935958153690171099, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -863,6 +940,10 @@ PrefabInstance:
     - target: {fileID: 3935958153690171099, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460793432536451686, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 5367625374459970286, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_Pivot.x
@@ -952,9 +1033,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResumeGame
       objectReference: {fileID: 0}
+    - target: {fileID: 7791801508198673808, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8493207069612269849, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_Name
       value: MajorGameUIs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538402067119914877, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8914996496465074810, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -967,6 +1056,31 @@ PrefabInstance:
     - target: {fileID: 8914996496465074810, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013046553808370908, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 'With urgency pressing
+
+        I faced the distressing
+
+        but
+        in the end
+
+        I failed the test
+
+        unable to ''go'' at my best'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013046553808370908, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013046553808370908, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015388433430635698, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1217,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 1711626405904944c93f2dffc2e46094, type: 3}
     - target: {fileID: 3360608005804233759, guid: d017396b5b6d0eb4db37aa1ee6f334f2, type: 3}
       propertyPath: canFollow
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3360608005804233759, guid: d017396b5b6d0eb4db37aa1ee6f334f2, type: 3}
       propertyPath: moveSpeed
@@ -1229,11 +1343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3360608005804233759, guid: d017396b5b6d0eb4db37aa1ee6f334f2, type: 3}
       propertyPath: targetDirection.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3360608005804233759, guid: d017396b5b6d0eb4db37aa1ee6f334f2, type: 3}
       propertyPath: targetDirection.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7315917214221888839, guid: d017396b5b6d0eb4db37aa1ee6f334f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21775,7 +21889,7 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 0d7be01213094164da77a7a86522261e, type: 3}
     - target: {fileID: 3360608005804233759, guid: d017396b5b6d0eb4db37aa1ee6f334f2, type: 3}
       propertyPath: canFollow
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3360608005804233759, guid: d017396b5b6d0eb4db37aa1ee6f334f2, type: 3}
       propertyPath: moveSpeed
