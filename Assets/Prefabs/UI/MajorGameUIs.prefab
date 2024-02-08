@@ -306,7 +306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 326620015879660395, guid: 1b1c3326c7fe49a48ab2dfc222520ea0, type: 3}
       propertyPath: timeLeft
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3235324567695040251, guid: 1b1c3326c7fe49a48ab2dfc222520ea0, type: 3}
       propertyPath: m_Pivot.x
@@ -388,6 +388,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4596407122153772815, guid: 1b1c3326c7fe49a48ab2dfc222520ea0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4639623d3a10c6c4b8b88c885dcac63d, type: 3}
     - target: {fileID: 8795267769689831831, guid: 1b1c3326c7fe49a48ab2dfc222520ea0, type: 3}
       propertyPath: m_Name
       value: Timer

@@ -22253,6 +22253,10 @@ PrefabInstance:
       propertyPath: pauseUI
       value: 
       objectReference: {fileID: 982098692}
+    - target: {fileID: 4828454386691815402, guid: e08a007cc7bb68d40ab77bd1849dd462, type: 3}
+      propertyPath: playerControls
+      value: 
+      objectReference: {fileID: 6410859899939076057}
     - target: {fileID: 8463257928148190435, guid: e08a007cc7bb68d40ab77bd1849dd462, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6151805
@@ -22479,6 +22483,17 @@ PrefabInstance:
       addedObject: {fileID: 519420032}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742ebd1e55b928b47b3e226a3a1c5c3f, type: 3}
+--- !u!114 &6410859899939076057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4366515272771363509, guid: 742ebd1e55b928b47b3e226a3a1c5c3f, type: 3}
+  m_PrefabInstance: {fileID: 6410859899939076056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa3c3a9c59b8c09468a67b6e9ace20df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
