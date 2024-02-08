@@ -6,22 +6,9 @@ using UnityEngine.InputSystem;
 
 public class Goal : MonoBehaviour
 {
-    public Canvas uiLevelCleared;
-
     [SerializeField] private bool isOccupied = false;
 
     public TextAsset inkJSON;
-
-    void Start()
-	{
-		uiLevelCleared.enabled = false;
-	}
-
-    void Update() {
-        if (uiLevelCleared.enabled && Keyboard.current.enterKey.wasPressedThisFrame) {
-            LoadNextScene();
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {

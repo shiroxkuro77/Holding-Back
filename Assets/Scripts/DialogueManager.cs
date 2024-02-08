@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Keyboard.current.enterKey.wasPressedThisFrame) {
+        if (Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.FindKeyOnCurrentKeyboardLayout("f").wasPressedThisFrame) {
             ContinueStory();
         }
 
