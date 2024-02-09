@@ -42,7 +42,6 @@ public class GameMaster : MonoBehaviour
     public void RestartGame(){
         string sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadSceneAsync(sceneName);
-        
     }
 
     public void ReturnToMainMenu(){
