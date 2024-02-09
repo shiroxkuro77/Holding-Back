@@ -179,7 +179,7 @@ public class OldLadyAI : MonoBehaviour
     {
 
         // Wait for 1 seconds
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
 
         currentStory = new Story(inkJSON.text);
         DialogueManager.GetInstance().EnterDialogueMode(currentStory);

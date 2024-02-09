@@ -115,20 +115,44 @@ PrefabInstance:
     m_TransformParent: {fileID: 5367625374459970286}
     m_Modifications:
     - target: {fileID: 1856259263883904900, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
+      propertyPath: m_text
+      value: 'With seconds to spare
+
+        I dodged a scare
+
+        I made it
+        to the throne
+
+        My timing rare
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856259263883904900, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_fontSize
-      value: 64
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 1856259263883904900, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_fontSizeBase
-      value: 64
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992642681845530835, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
+      propertyPath: m_text
+      value: 'With seconds to spare
+
+        I dodged a scare
+
+        I made it
+        to the throne
+
+        My timing rare'
       objectReference: {fileID: 0}
     - target: {fileID: 1992642681845530835, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_fontSize
-      value: 64
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 1992642681845530835, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_fontSizeBase
-      value: 64
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 2864588372440880476, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -147,12 +171,20 @@ PrefabInstance:
       value: 2.4292908
       objectReference: {fileID: 0}
     - target: {fileID: 3353782044742426826, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353782044742426826, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_fontSize
       value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3353782044742426826, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_fontSizeBase
       value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524760206600335395, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 4976281201480407724, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_Pivot.x
@@ -239,6 +271,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8002558580585633749, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002558580585633749, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_fontSize
       value: 36
       objectReference: {fileID: 0}
@@ -276,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8688754870877970495, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level2
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 8688754870877970495, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -284,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9093293845248679671, guid: 088157dccab167945a7c1bff839a5e6e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 114
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -306,7 +342,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 326620015879660395, guid: 1b1c3326c7fe49a48ab2dfc222520ea0, type: 3}
       propertyPath: timeLeft
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3235324567695040251, guid: 1b1c3326c7fe49a48ab2dfc222520ea0, type: 3}
       propertyPath: m_Pivot.x
@@ -648,6 +684,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4182543204724989944, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
+      propertyPath: m_text
+      value: 'With urgency pressing
+
+        I faced the distressing
+
+        but
+        in the end
+
+        I failed the test
+
+        unable to ''go'' at my best'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182543204724989944, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182543204724989944, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 6358692384979650964, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -672,6 +729,27 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7633203927940700744, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
+      propertyPath: m_text
+      value: 'With urgency pressing
+
+        I faced the distressing
+
+        but
+        in the end
+
+        I failed the test
+
+        unable to ''go'' at my best'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633203927940700744, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633203927940700744, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 7695033666790583752, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
       propertyPath: m_Name
       value: GameLostUI
@@ -679,6 +757,14 @@ PrefabInstance:
     - target: {fileID: 7695033666790583752, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046246713155898446, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046246713155898446, guid: 6b6c1e3aeb801f64b80b6402f17f42a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -698,6 +784,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5367625374459970286}
     m_Modifications:
+    - target: {fileID: 4861392802679175320, guid: b932d8b9fceb69d4aae3edf3008854e0, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4861392802679175320, guid: b932d8b9fceb69d4aae3edf3008854e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
