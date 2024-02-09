@@ -147,16 +147,43 @@ public class OldLadyAI : MonoBehaviour
         if (playerInRange) {
             visualCue.SetActive(true);
             if (Keyboard.current.FindKeyOnCurrentKeyboardLayout("f").wasPressedThisFrame) {
-                currentStory = new Story(inkJSON.text);
-                DialogueManager.GetInstance().EnterDialogueMode(currentStory);
+                StartCoroutine(WaitAndTriggerAction());
                 transform.position = new Vector2(playerObject.transform.position.x, playerObject.transform.position.y + 1); 
                 gameObject.transform.SetParent(playerObject.transform);
                 PlayerControls playercontrols = playerObject.GetComponent<PlayerControls>();
                 playercontrols.moveSpeed = 3f;
+                //playercontrols.disableMovement();
             }
         } else {
             visualCue.SetActive(false);
         }
+
+        if (playerObject != null) {
+            Vector2 targetDirection = (playerObject.transform.position - transform.position).normalized;
+
+            if (targetDirection.x < 0) {
+                spriteRenderer.flipX = true;
+                animator.SetInteger("MovingDirection", 1);
+            } else if (targetDirection.x > 0) {
+                spriteRenderer.flipX = false;
+                animator.SetInteger("MovingDirection", 1);
+            } else if (targetDirection.y > 0) { 
+                animator.SetInteger("MovingDirection", 2);
+            } else if (targetDirection.y < 0) { 
+                animator.SetInteger("MovingDirection", 3);
+            }
+        }
+    }
+
+    IEnumerator WaitAndTriggerAction()
+    {
+
+        // Wait for 1 seconds
+        yield return new WaitForSeconds(0.2f);
+
+        currentStory = new Story(inkJSON.text);
+        DialogueManager.GetInstance().EnterDialogueMode(currentStory);
+       // playercontrols.enableMovement();
 
     }
 

@@ -51,14 +51,27 @@ public class Car : MonoBehaviour
             Rigidbody2D playersRB = other.transform.GetComponent<Rigidbody2D>();
             if (playersRB != null){
                 Debug.Log("Pushing player");
-                Vector2 pushVector = new Vector2(velocityVector.x == 0 ? 0 : velocityVector.x * 5.0f, velocityVector.y == 0 ? 0 : velocityVector.y * 5.0f);
+                Vector2 pushVector = new Vector2(velocityVector.x == 0 ? 0 : velocityVector.x * 15.0f, velocityVector.y == 0 ? 0 : velocityVector.y * 15.0f);
                 playersRB.velocity = pushVector;
             }
-            Debug.Log("Player Hit. Lost game");
-            GameMaster.instance.PlayerLose();
+
+    
+            StartCoroutine(WaitAndTriggerAction()); 
+
         }
 
         // TODO call gamemaster to enable lost game process
+
+    }
+
+     IEnumerator WaitAndTriggerAction()
+    {
+
+        // Wait for 1 seconds
+        yield return new WaitForSeconds(1f);
+
+        Debug.Log("Player Hit. Lost game");
+        GameMaster.instance.PlayerLose();
 
     }
 

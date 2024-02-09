@@ -2,8 +2,8 @@ Hi There!, Check out our latest model, the Velocity X, is the perfect blend of p
 The Velocity X checks all those boxes. It boasts an impressive fuel efficiency of 30 miles per gallon and a turbocharged engine for that extra kick
 Plus, the smart tech features will make your drive more enjoyable. 
 Would you like to take it for a spin?
-    * [Yes] -> Follow_me
-    * [Leave me alone!] -> Hey_Hey
+    + [Yes] -> Follow_me
+    + [Leave me alone!] -> Hey_Hey
 === Follow_me ===
 Awesome, follow me!
 -> END

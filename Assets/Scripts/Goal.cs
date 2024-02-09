@@ -6,22 +6,9 @@ using UnityEngine.InputSystem;
 
 public class Goal : MonoBehaviour
 {
-    public Canvas uiLevelCleared;
-
     [SerializeField] private bool isOccupied = false;
 
     public TextAsset inkJSON;
-
-    void Start()
-	{
-		uiLevelCleared.enabled = false;
-	}
-
-    void Update() {
-        if (uiLevelCleared.enabled && Keyboard.current.enterKey.wasPressedThisFrame) {
-            LoadNextScene();
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,7 +21,11 @@ public class Goal : MonoBehaviour
                     PlayerControls playercontrols = collision.gameObject.GetComponent<PlayerControls>();
                     playercontrols.disableMovement();
 
-                    GameMaster.instance.PlayerWin();
+                    if (checkIfClearQuest()) {
+                        GameMaster.instance.PlayerWin();
+                    } else {
+                        GameMaster.instance.PlayerLose();
+                    }
                     // uiLevelCleared.enabled = true;
                 }
                 else{
@@ -42,6 +33,26 @@ public class Goal : MonoBehaviour
                 }
                 
             }
+    }
+
+
+    //Return true if clear quest, else false
+    bool checkIfClearQuest() {
+
+        OldLadyAI[] allComponents = FindObjectsOfType<OldLadyAI>();
+
+        int count = 0;
+
+        foreach (OldLadyAI component in allComponents)
+        {
+            count++;
+        }
+
+        if (count > 0) {
+            return false;
+        }
+
+        return true;
     }
 
     public void LoadNextScene()

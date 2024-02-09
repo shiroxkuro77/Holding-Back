@@ -30,8 +30,7 @@ public class QuestTrigger : MonoBehaviour
             visualCue.SetActive(true);
             
             if (Keyboard.current.FindKeyOnCurrentKeyboardLayout("f").wasPressedThisFrame) {
-                currentStory = new Story(inkJSON.text);
-                DialogueManager.GetInstance().EnterDialogueMode(currentStory);
+                StartCoroutine(WaitAndTriggerAction());
             }
         } else {
             visualCue.SetActive(false);
@@ -41,12 +40,25 @@ public class QuestTrigger : MonoBehaviour
             return;
         }
         
+        /*
         int catsaved = int.Parse(currentStory.variablesState["catsaved"].ToString());
 
         if (catsaved == 1) {
             GameObject parentObject = transform.parent.gameObject;
             parentObject.SetActive(false);
-        }
+        }*/
+
+    }
+
+    IEnumerator WaitAndTriggerAction()
+    {
+
+        // Wait for 1 seconds
+        yield return new WaitForSeconds(0.1f);
+
+        currentStory = new Story(inkJSON.text);
+        DialogueManager.GetInstance().EnterDialogueMode(currentStory);
+       // playercontrols.enableMovement();
 
     }
 

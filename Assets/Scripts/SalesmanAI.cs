@@ -113,8 +113,8 @@ public class SalesmanAI : MonoBehaviour
         Vector2 newDirection = (playerObject.transform.position - transform.position).normalized;
         moveSpeed = 5f;
         TryMove(newDirection);
-        if (TryMove(new Vector2(0, newDirection.y))) return;
-        TryMove(new Vector2(newDirection.x, 0));
+        //if (TryMove(new Vector2(0, newDirection.y))) return;
+        //TryMove(new Vector2(newDirection.x, 0));
     }
 
     void OnTriggerEnter2D(Collider2D collision)

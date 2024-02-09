@@ -52,10 +52,20 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Keyboard.current.enterKey.wasPressedThisFrame) {
+        if (Keyboard.current.FindKeyOnCurrentKeyboardLayout("f").wasPressedThisFrame) {
             ContinueStory();
+            //StartCoroutine(WaitAndTriggerAction());
         }
 
+    }
+
+       IEnumerator WaitAndTriggerAction()
+    {
+
+        // Wait for 1 seconds
+        yield return new WaitForSeconds(0.1f);
+
+        ContinueStory();
     }
 
     public void EnterDialogueMode(TextAsset inkJSON) {

@@ -9,6 +9,7 @@ public class GameMaster : MonoBehaviour
     public GameObject loseUI;
     public GameObject winUI;
     public GameObject pauseUI;
+    public PlayerControls playerControls;
 
     private void Awake() {
         if (instance != null){
@@ -18,8 +19,8 @@ public class GameMaster : MonoBehaviour
         Time.timeScale = 1;
     }
     public void PlayerLose(){
+        playerControls.disableMovement();
         loseUI.SetActive(true);
-
     }
 
     public void PlayerWin(){
@@ -41,7 +42,6 @@ public class GameMaster : MonoBehaviour
     public void RestartGame(){
         string sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadSceneAsync(sceneName);
-        
     }
 
     public void ReturnToMainMenu(){
