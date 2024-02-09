@@ -33396,10 +33396,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1524100191}
+    - target: {fileID: 1768664953317243542, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: Congratulations!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940496625727405505, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 'Congratulations!
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2243140046584851120, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1524100191}
+    - target: {fileID: 3289810883285605007, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: You achieved timely shipment of the product!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3382538068825258348, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 'Oh No!
+
+        You shat yourself!'
+      objectReference: {fileID: 0}
     - target: {fileID: 3935958153690171099, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -33488,14 +33508,32 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1524100191}
+    - target: {fileID: 7791801508198673808, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: You achieved timely shipment of the product!
+      objectReference: {fileID: 0}
     - target: {fileID: 8493207069612269849, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_Name
       value: MajorGameUIs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538402067119914877, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8914996496465074810, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1524100191}
+    - target: {fileID: 8914996496465074810, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013046553808370908, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_text
+      value: 'Oh No!
+
+        You shat yourself!'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

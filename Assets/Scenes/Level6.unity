@@ -481,43 +481,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768664953317243542, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_text
-      value: 'Amidst the chaos,
+      value: 'Why don''t toilets ever play hide and seek?
 
-        in the rhythm of the rhyme,
-
-        I emerged
-        victorious,
-
-        delivering in time.'
+        Because they''re
+        tired of being "flushed" out every time!'
       objectReference: {fileID: 0}
     - target: {fileID: 1768664953317243542, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_fontSize
-      value: 48
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 1768664953317243542, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_fontSizeBase
-      value: 48
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 1940496625727405505, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_text
-      value: 'Amidst the chaos,
+      value: 'Why don''t toilets ever play hide and seek?
 
-        in the rhythm of the rhyme,
-
-        I emerged
-        victorious,
-
-        delivering in time.
+        Because they''re
+        tired of being "flushed" out every time!
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 1940496625727405505, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_fontSize
-      value: 48
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 1940496625727405505, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_fontSizeBase
-      value: 48
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 2243140046584851120, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

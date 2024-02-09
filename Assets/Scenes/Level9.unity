@@ -84463,6 +84463,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1524100191}
+    - target: {fileID: 8914996496465074810, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LevelEND
+      objectReference: {fileID: 0}
     - target: {fileID: 9013046553808370908, guid: f0b86e346bb9ba4448d30087a950a09a, type: 3}
       propertyPath: m_text
       value: "Not enough toilet in \nthe world for those in shit"
